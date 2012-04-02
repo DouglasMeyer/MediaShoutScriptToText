@@ -1,0 +1,46 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { padding: 10px; }
+#about {
+  position: absolute;
+  bottom: 0; right: 0;
+}
+#dropbox {
+  position: absolute;
+  top: 20px; right: 20px; bottom: 20px; left: 20px;
+  border: 2px dashed gray;
+  padding-top: 25%;
+  text-align: center;
+}
+#dropbox.dragging {
+  top: 17px; right: 17px; bottom: 17px; left: 17px;
+  border-width: 5px;
+}
+#dropbox.dropped {
+  position: static;
+  padding: 8px 3px;
+  width: 90%;
+  margin: 0 auto;
+}
+#dropbox.dropped.dragging {
+  padding: 5px 0;
+}
+#dropbox.dropped + #about {
+  display: none;
+}
+@media print {
+  #dropbox, #about {
+    display: none;
+  }
+}
+h1, h2, h3 {
+  margin-top: 1em;
+  margin-bottom: 1ex;
+  font-weight: bold;
+}
+pre {
+  padding: 1ex 0;
+  width: 150ex;
+  border-top: 1px solid gray;
+  white-space: pre-line;
+}
+h2 + pre { border-top: none; }
